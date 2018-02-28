@@ -1,0 +1,14 @@
+net: "./models/Best/analysis.prototxt"
+test_iter: 100
+test_interval: 100
+base_lr: 0.01
+lr_policy: "fixed"
+display: 50
+max_iter: 50000
+momentum: 0.99
+weight_decay: 0.0005
+snapshot: 100
+snapshot_prefix: "./snapshot/Cls-state/CNN-Best-model"
+solver_mode: GPU
+type: "AdaDelta"
+delta: 1e-6
