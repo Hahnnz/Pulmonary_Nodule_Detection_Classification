@@ -10,6 +10,12 @@
 ## Project URL
 * [Demo webpage](http://alpha.inu.ac.kr:5910)
 
+#### photograph : 2017.11.16. Graduation Exhibition Contest
+<img src="./images/171116.jpg" width="600" height="380">
+
+#### 2 Grand Prize Awarded
+<img src="./images/대상-과학기술대학장.jpeg" width="300" height="400"><img src="./images/최우수상-스마트도시과학경영대학원장.jpeg" width="300" height="400">
+
 ## Citations
 [1] Y.Lee, T. Hara, Fujita, S.Itoh, and T. Ishihaki. "Automated detection of pulmonary nodules in helical CT images based on an improved temlate maching technique", IEEE Trans. Med. Imaging, vol.20, pp. 595-604, 2001.
 
@@ -18,8 +24,3 @@
 [3] Madero Orozco, H; VergaraVillegas, O.O. ; De jesus Ochoa Dominguez, H. ; Cruz Shanchez, V.G, "Lung Nodule Classification in CT Thorax Images Using Support VectorMachines", Artificial Intelligence (MICAI) 12th Mexican International Conference, pp. 277-283, 2013.
 
 [4] Zihao Lua,  Marcus A. Brubaker, Michael Brudno. "Size and Texture-based Classification of Lung Tumors with 3D CNNs", 2017 IEEE Winter Conference on Applications of Computer vision, 806-814, 2017.
-
-
-#### photograph : Grand Prize Awarded at 2017.11.16. Graduation Exhibition Contest
-<img src="./images/171116.jpg" width="600" height="380">
-
