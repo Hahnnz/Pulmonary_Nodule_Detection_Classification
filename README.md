@@ -5,8 +5,11 @@
 \ | Details
  :-: | :-----:
  **Abstract** | Deep neural network to detect isolated nodules, which classify whether nodule is cancer or not from chest CT(computed tomography) images. In this project, deep neural network is based on CNN including Deconvolution layers and unpooling layers for classification and segmentation.
- Demo | 
+ Demo | <b>Original&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predicted</b></br><img src="./images/original.png" width="256" height="256">    <img src="./images/predicted.png" width="256" height="256">
  
+ \ | [1] | [2] | [3] | [4] | [Proposal]
+ :-: | :-: | :-: | :-: | :-: | :--------:
+ **Accuracy** | 72% | 82.3% | 84% | 89.3% | _**92.7**_
 ## Project URL
 * [Demo webpage](http://alpha.inu.ac.kr:5910)
 
@@ -16,7 +19,7 @@
 #### 2 Grand Prize Awarded
 <img src="./images/대상-과학기술대학장.jpeg" width="300" height="400"><img src="./images/최우수상-스마트도시과학경영대학원장.jpeg" width="300" height="400">
 
-## Citations
+## Citations - for Accuracy comparison
 [1] Y.Lee, T. Hara, Fujita, S.Itoh, and T. Ishihaki. "Automated detection of pulmonary nodules in helical CT images based on an improved temlate maching technique", IEEE Trans. Med. Imaging, vol.20, pp. 595-604, 2001.
 
 [2] A. Farag, A. El-Baz, G. G. Gimelfarb, R. Falk, and R. S. Hushek, "Automatic detedction and recognition of lung abnoralities in helical CT images using deformable templates,"in Lecture Notes in Computer Science, Medical Image Computing and Computer Assisted Intervention, vol. 3217, New York: Springer-Verlag, pp. 856-864, 2004.
