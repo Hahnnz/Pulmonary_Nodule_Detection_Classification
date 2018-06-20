@@ -68,4 +68,4 @@ def load(num_process=4):
     Test_dataset = np.array(Test_Nodule_None + Test_Nodule_Benign + Test_Nodule_Malignant)
     Test_roi_mask = np.array(Test_Mask_None + Test_Mask_Benign + Test_Mask_Malignant)
     
-    return Train_dataset, Train_roi_mask[:,:,:,:,np.newaxis], Test_dataset, Test_roi_mask[:,:,:,:,np.newaxis]
+    return Train_dataset, Train_roi_mask, Test_dataset, Test_roi_mask
