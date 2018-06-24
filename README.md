@@ -1,4 +1,4 @@
-# LNDC-Project
+# PNDC-Project
 
 **Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in Computed Tomography image of the Chest Using Deep Learning**
 
@@ -10,11 +10,6 @@
  \ | [1] | [2] | [3] | [4] | [Proposal]
  :-: | :-: | :-: | :-: | :-: | :--------:
  **Accuracy** | 72% | 82.3% | 84% | 89.3% | _**92.7**_
-## Project URL
-* [Demo webpage](http://alpha.inu.ac.kr:5910)
-
-#### photograph : 2017.11.16. Graduation Exhibition Contest
-<img src="./images/171116.jpg" width="600" height="380">
 
 #### 2 Grand Prize Awarded
 <img src="./images/대상-과학기술대학장.jpeg" width="300" height="400"><img src="./images/최우수상-스마트도시과학경영대학원장.jpeg" width="300" height="400">
