@@ -1,6 +1,7 @@
-# PNDC-Project
+# PNDC
+**Pulmonary Nodule Detection & Classification**
 
-**Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in Computed Tomography image of the Chest Using Deep Learning**
+Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in Computed Tomography image of the Chest Using Deep Learning
 
 \ | Details
  :-: | :-----:
@@ -10,6 +11,15 @@
  \ | [1] | [2] | [3] | [4] | [Proposal]
  :-: | :-: | :-: | :-: | :-: | :--------:
  **Accuracy** | 72% | 82.3% | 84% | 89.3% | _**92.7**_
+ 
+## Requirements
+- **Python ≥ 3.5**
+- **Tensorflow ≥ 1.5.0**
+- **Caffe ≥ 1.0.0**
+- **Numpy ≥ 1.14.3**
+- **Tqdm ≥ 4.19.9**
+- **LMDB ≥ 0.94**
+
 
 #### 2 Grand Prize Awarded
 <img src="./images/대상-과학기술대학장.jpeg" width="300" height="400"><img src="./images/최우수상-스마트도시과학경영대학원장.jpeg" width="300" height="400">
