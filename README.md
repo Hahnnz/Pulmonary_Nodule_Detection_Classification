@@ -20,10 +20,6 @@ Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in C
 - **Tqdm ≥ 4.19.9**
 - **LMDB ≥ 0.94**
 
-
-#### 2 Grand Prize Awarded
-<img src="./images/대상-과학기술대학장.jpeg" width="300" height="400"><img src="./images/최우수상-스마트도시과학경영대학원장.jpeg" width="300" height="400">
-
 ## Citations - for Accuracy comparison
 [1] Y.Lee, T. Hara, Fujita, S.Itoh, and T. Ishihaki. "Automated detection of pulmonary nodules in helical CT images based on an improved temlate maching technique", IEEE Trans. Med. Imaging, vol.20, pp. 595-604, 2001.
 
