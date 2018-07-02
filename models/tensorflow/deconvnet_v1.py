@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-from models.layers import *
+from models.tensorflow.layers import *
 
 class deconvnet:
     def __init__(self,input_shape,output_shape,gpu_memory_fraction=None):
