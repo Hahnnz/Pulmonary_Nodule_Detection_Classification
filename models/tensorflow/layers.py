@@ -96,31 +96,3 @@ def ZeroPadding2D(data,psize,Type="CONSTANT",name=None):
             else : 
                 padded_dataset=tf.concat([padded_dataset,padded],0)
     return padded_dataset
-
-def IoU_Loss(logits, num_classes, mask):
-    logits = tf.reshape(logits, (-1, num_classes))
-    mask = tf.reshape(mask, [-1])
-
-    inter = tf.reduce_sum(tf.multiply(logits, mask))
-    union = tf.reduce_sum(tf.subtract(tf.add(logits, mask), tf.multiply(logits, mask)))
-
-    return tf.substract(tf.constant(1.0, dtype=tf.float32), tf.div(inter, union))
-
-def RoI_OHE(roi_mask,Class):
-    if Class.lower() == "benign": Class = tf.constant([0,1,0])
-    elif Class.lower() == "malignant": Class = tf.constant([0,0,1])
-    else : raise ValueError("Class should 'Benign' or 'Malignant'.")
-    
-    one_hot_roi = None
-    roi_x, roi_y = list(map(int,test_roi.get_shape()))[:2]
-    for i in range(roi_x):
-        one_hot = tf.map_fn(lambda x: 
-                                tf.cond(tf.greater(x[0],0), 
-                                        lambda: Class, lambda: tf.constant([1,0,0])),
-                                roi_mask[i])
-        if i == 0 :
-            one_hot_roi=tf.expand_dims(one_hot,0)
-        else :
-            one_hot_roi = tf.concat((one_hot_roi,tf.expand_dims(one_hot,0)),axis=0)
-        
-    return one_hot_roi
