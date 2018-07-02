@@ -6,7 +6,7 @@ Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in C
 \ | Details
  :-: | :-----:
  **Abstract** | Deep neural network to detect isolated nodules, which classify whether nodule is cancer or not from chest CT(computed tomography) images. In this project, deep neural network is based on CNN including Deconvolution layers and unpooling layers for classification and segmentation.
- Demo | <b>Original&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predicted</b></br><img src="./images/original.png" width="256" height="256">    <img src="./images/predicted.png" width="256" height="256">
+ Demo | <b>Original&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predicted</b></br><img src="./images/original.png" width="256" height="256">    <img src="./images/predicted.png" width="256" height="256"> </br>Dataset is comes from **[The Cancer Imaging Archive](http://www.cancerimagingarchive.net/)**
  
  \ | [1] | [2] | [3] | [4] | [Proposal]
  :-: | :-: | :-: | :-: | :-: | :--------:
@@ -15,7 +15,7 @@ Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in C
 ## Requirements
 - **Python ≥ 3.5**
 - **Tensorflow ≥ 1.5.0**
-- **Caffe ≥ 1.0.0**
+- **Caffe = 1.0.0**
 - **Numpy ≥ 1.14.3**
 - **Tqdm ≥ 4.19.9**
 - **LMDB ≥ 0.94**
