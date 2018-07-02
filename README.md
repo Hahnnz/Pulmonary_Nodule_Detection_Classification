@@ -1,6 +1,8 @@
 # PNDC
 **Pulmonary Nodule Detection & Classification**
-
+```
+ Extra Codes Will be updated soon!
+ ```
 Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in Computed Tomography image of the Chest Using Deep Learning
 
 \ | Details
@@ -11,7 +13,7 @@ Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in C
  \ | [1] | [2] | [3] | [4] | [Proposal]
  :-: | :-: | :-: | :-: | :-: | :--------:
  **Accuracy** | 72% | 82.3% | 84% | 89.3% | _**92.7**_
- 
+
 ## Requirements
 - **Python ≥ 3.5**
 - **Tensorflow ≥ 1.5.0**
