@@ -104,7 +104,7 @@ def IoU_Loss(logits, num_classes, mask):
     inter = tf.reduce_sum(tf.multiply(logits, mask))
     union = tf.reduce_sum(tf.subtract(tf.add(logits, mask), tf.multiply(logits, mask)))
 
-    return tf.substract(tf.constant(1.0, dtype=tf.float32), tf.div(interm union))
+    return tf.substract(tf.constant(1.0, dtype=tf.float32), tf.div(inter, union))
 
 def RoI_OHE(roi_mask,Class):
     if Class.lower() == "benign": Class = tf.constant([0,1,0])
