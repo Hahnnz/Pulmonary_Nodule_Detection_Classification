@@ -25,6 +25,10 @@ def RoI_OHE(roi_mask,Class):
     roi_set = None
     one_hot_roi = None
     num, roi_x, roi_y = list(map(int,roi_mask.get_shape()))[:3]
+    
+    processed_batchs = list()
+    count = 0
+        
     with tqdm(total = num) as pbar:
         for n in range(num):
             for i in range(roi_x):
@@ -37,8 +41,14 @@ def RoI_OHE(roi_mask,Class):
                 else :
                     one_hot_roi = tf.concat((one_hot_roi,tf.expand_dims(one_hot,0)),axis=0)
             if n == 0 :
+                count+=1
                 roi_set = tf.expand_dims(one_hot_roi,0)
             else :
                 roi_set = tf.concat((roi_set,tf.expand_dims(one_hot_roi,0)),axis=0)
+                count+=1
+                if count==100:
+                    processed_batchs.append(roi_set)
+                    count=0
             pbar.update(1)
-    return roi_set
+
+    return tf.concat(processed_batches, axis=0) if len(processed_batches)>1 else processed_batches[0]
