@@ -48,7 +48,8 @@ def RoI_OHE(roi_mask,Class):
                 count+=1
                 if count==100:
                     processed_batchs.append(roi_set)
+                    roi_set=None
                     count=0
             pbar.update(1)
-
+        if roi_set is not None : processed_batchs.append(roi_set)
     return tf.concat(processed_batches, axis=0) if len(processed_batches)>1 else processed_batches[0]
