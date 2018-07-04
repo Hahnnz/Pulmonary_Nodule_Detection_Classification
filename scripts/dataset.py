@@ -6,9 +6,9 @@ from multiprocessing import Pool
 
 
 class load():
-    def __init__(self, Class, Phase, img_root, roi_root,
-                 Rotate=False, theta_set={90},Fliplr=False, Resize=False, Shuffle=False, num_process=4):
-        if Class.lower() not in ['benign','malignant']:
+    def __init__(self, Class, Phase, img_root, roi_root, Rotate=False, theta_set={90},
+                 Fliplr=False, Resize=False, Shuffle=False, roi_ohe=False, num_process=4):
+        if Class.lower() not in ['none','benign','malignant']:
             raise ValueError('Class must be "benign" or "malignant".')
         if Phase.lower() not in ['train','test']:
             raise ValueError('Phase must be "train" or "test".')
@@ -72,6 +72,12 @@ class load():
                     self.n_img.append(c_img)
                     self.n_roi.append(c_roi)
                 pbar.update(1)
+                
+        
+        if roi_ohe :
+            for i in range(len(self.dataset[1])):
+                self.dataset[1,i] = pp.RoI_OHE(self.dataset[1,i],self.Class)
+        
         self.dataset = {self.Class+'_img':np.array(self.c_img),self.Class+'_roi':np.array(self.c_roi),
                        'none_img':np.array(self.n_img),'none_roi':np.array(self.n_roi)}
     def _im_and_roi_read(self, paths):
@@ -80,7 +86,7 @@ class load():
 class LMDB():
     def __init__(self, Class, Phase, mode, dataset=None,
                  caffe_root = './caffe/', lmdb_root='./LMDB/'):
-        if Class.lower() not in ['benign','malignant']:
+        if Class.lower() not in ['none','benign','malignant']:
             raise ValueError('Class must be "benign" or "malignant".')
         if Phase.lower() not in ['train','test']:
             raise ValueError('Phase must be "train" or "test".')
@@ -93,11 +99,11 @@ class LMDB():
         self.Phase = Phase.lower()
             
         if mode == 'write':
-            self.write(dataset, caffe_root, lmdb_root)
+            self._write(dataset, caffe_root, lmdb_root)
         elif mode == 'read':
-            self.dataset = self.read(lmdb_root)
+            self.dataset = self._read(lmdb_root)
             
-    def write(self, dataset, caffe_root, lmdb_root):
+    def _write(self, dataset, caffe_root, lmdb_root):
         try:
             import lmdb
             import sys
@@ -117,7 +123,7 @@ class LMDB():
                 lmdb_txn.put((self.Class+'_img_'+'{:08}'.format(i+1)).encode('ascii'),datum_img.SerializeToString())
                 lmdb_txn.put((self.Class+'_roi_'+'{:08}'.format(i+1)).encode('ascii'),datum_roi.SerializeToString())
                 
-    def read(self, lmdb_root):
+    def _read(self, lmdb_root):
         try:
             import lmdb
         except:
@@ -135,8 +141,8 @@ class LMDB():
             with lmdb_txn.cursor() as lmdb_cursor:
                 for key, value in lmdb_cursor:  
                     if(self.Class+'_img' in str(key)):
-                        img.append(np.fromstring(value, dtype=np.uint8)[:12288].reshape(3,64,64).transpose(1,2,0))
+                        img.append(np.fromstring(value, dtype=np.uint8)[9:].reshape(3,64,64).transpose(1,2,0))
                     if(self.Class+'_roi' in str(key)):
-                        roi.append(np.fromstring(value, dtype=np.uint8)[:12288].reshape(3,64,64).transpose(1,2,0))
+                        roi.append(np.fromstring(value, dtype=np.uint8)[9:].reshape(3,64,64).transpose(1,2,0))
     
-        return {self.Class+'_img': np.array(img), self.Class+'_roi': np.array(roi)}
+        return {'img': np.array(img), 'roi': np.array(roi)}
