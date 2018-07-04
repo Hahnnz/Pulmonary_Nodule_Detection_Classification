@@ -146,3 +146,27 @@ def Crop_None(image,mask,bbox_coors):
     image = image[coors_img[0]:coors_img[1],coors_img[2]:coors_img[3]]
     mask = mask[coors_img[0]:coors_img[1],coors_img[2]:coors_img[3]]
     return image, mask
+
+def RoI_OHE(roi_mask,Class, threshold=10):
+    """
+    Description
+        Region Of Interest One How Encoding. This function is suitted for PNDC-project only.
+        
+    Arguments
+        - roi_mask : roi mask data
+        - Class : insert 'Benign' or 'Malignant'
+    
+    Output
+        one hot encoded roi mask
+    """
+    if Class.lower() == "benign": ohe = [0,1,0]
+    elif Class.lower() == "malignant": ohe = [0,0,1]
+    elif Class.lower() == 'none': ohe = [1,0,0]
+    else : raise ValueError("Class should 'Benign' or 'Malignant' or 'none'.")
+    
+    roi_x, roi_y = roi_mask.shape[:2]
+    for i in range(roi_x):
+        for j in range(roi_y):
+            roi_mask[i,j] = ohe if roi_mask[i,j,0] > threshold else [1,0,0]
+    
+    return roi_mask
