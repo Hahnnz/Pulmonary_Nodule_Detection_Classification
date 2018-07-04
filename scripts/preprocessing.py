@@ -153,8 +153,8 @@ def RoI_OHE(roi_mask,Class, threshold=10):
         Region Of Interest One How Encoding. This function is suitted for PNDC-project only.
         
     Arguments
-        - roi_mask : roi mask data
-        - Class : insert 'Benign' or 'Malignant'
+        - roi_mask : roi mask dataset
+        - Class : insert 'Benign' or 'Malignant' or 'none'
     
     Output
         one hot encoded roi mask
@@ -164,9 +164,12 @@ def RoI_OHE(roi_mask,Class, threshold=10):
     elif Class.lower() == 'none': ohe = [1,0,0]
     else : raise ValueError("Class should 'Benign' or 'Malignant' or 'none'.")
     
-    roi_x, roi_y = roi_mask.shape[:2]
-    for i in range(roi_x):
-        for j in range(roi_y):
-            roi_mask[i,j] = ohe if roi_mask[i,j,0] > threshold else [1,0,0]
+    roi_set = None
+    one_hot_roi = None
+    num, roi_x, roi_y = roi_mask.shape[:3]
     
+    for n in range(num):
+        for i in range(roi_x):
+            for j in range(roi_y):
+                roi_mask[n, i,j] = ohe if roi_mask[n,i,j,0] > threshold else [1,0,0]
     return roi_mask
