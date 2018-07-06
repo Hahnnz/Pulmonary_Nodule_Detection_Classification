@@ -20,10 +20,12 @@ Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in C
 - **LMDB ≥ 0.94**
 
 ## Citations - for Accuracy comparison
-[1] Y.Lee, T. Hara, Fujita, S.Itoh, and T. Ishihaki. "Automated detection of pulmonary nodules in helical CT images based on an improved temlate maching technique", IEEE Trans. Med. Imaging, vol.20, pp. 595-604, 2001.
+[1] Armato III, Samuel G., McLennan, Geoffrey, Bidaut, Luc, McNitt-Gray, Michael F., Meyer, Charles R., Reeves, Anthony P., … Clarke, Laurence P. (2015). Data From LIDC-IDRI. The Cancer Imaging Archive.
 
-[2] A. Farag, A. El-Baz, G. G. Gimelfarb, R. Falk, and R. S. Hushek, "Automatic detedction and recognition of lung abnoralities in helical CT images using deformable templates,"in Lecture Notes in Computer Science, Medical Image Computing and Computer Assisted Intervention, vol. 3217, New York: Springer-Verlag, pp. 856-864, 2004.
+[2] Y.Lee, T. Hara, Fujita, S.Itoh, and T. Ishihaki. "Automated detection of pulmonary nodules in helical CT images based on an improved temlate maching technique", IEEE Trans. Med. Imaging, vol.20, pp. 595-604, 2001.
 
-[3] Madero Orozco, H; VergaraVillegas, O.O. ; De jesus Ochoa Dominguez, H. ; Cruz Shanchez, V.G, "Lung Nodule Classification in CT Thorax Images Using Support VectorMachines", Artificial Intelligence (MICAI) 12th Mexican International Conference, pp. 277-283, 2013.
+[3] A. Farag, A. El-Baz, G. G. Gimelfarb, R. Falk, and R. S. Hushek, "Automatic detedction and recognition of lung abnoralities in helical CT images using deformable templates,"in Lecture Notes in Computer Science, Medical Image Computing and Computer Assisted Intervention, vol. 3217, New York: Springer-Verlag, pp. 856-864, 2004.
 
-[4] Zihao Lua,  Marcus A. Brubaker, Michael Brudno. "Size and Texture-based Classification of Lung Tumors with 3D CNNs", 2017 IEEE Winter Conference on Applications of Computer vision, 806-814, 2017.
+[4] Madero Orozco, H; VergaraVillegas, O.O. ; De jesus Ochoa Dominguez, H. ; Cruz Shanchez, V.G, "Lung Nodule Classification in CT Thorax Images Using Support VectorMachines", Artificial Intelligence (MICAI) 12th Mexican International Conference, pp. 277-283, 2013.
+
+[5] Zihao Lua,  Marcus A. Brubaker, Michael Brudno. "Size and Texture-based Classification of Lung Tumors with 3D CNNs", 2017 IEEE Winter Conference on Applications of Computer vision, 806-814, 2017.
