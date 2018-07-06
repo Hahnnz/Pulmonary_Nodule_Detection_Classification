@@ -8,11 +8,8 @@ Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in C
 \ | Details
  :-: | :-----:
  **Abstract** | Deep neural network to detect isolated nodules, which classify whether nodule is cancer or not from chest CT(computed tomography) images. In this project, deep neural network is based on CNN including Deconvolution layers and unpooling layers for classification and segmentation.
- Demo | <b>Original&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predicted</b></br><img src="./images/original.png" width="256" height="256">    <img src="./images/predicted.png" width="256" height="256"> </br>Dataset is comes from **[The Cancer Imaging Archive](http://www.cancerimagingarchive.net/)**
- 
- \ | [1] | [2] | [3] | [4] | [Proposal]
- :-: | :-: | :-: | :-: | :-: | :--------:
- **Accuracy** | 72% | 82.3% | 84% | 89.3% | _**92.7**_
+ Demo | <b>Original&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predicted</b></br><img src="./images/original.png" width="256" height="256">    <img src="./images/predicted.png" width="256" height="256">
+ **Dataset**<br/> | **[LIDC-IDRI](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI)**<br/>The Lung Image Database Consortium image collection (LIDC-IDRI) consists of diagnostic and lung cancer screening thoracic computed tomography (CT) scans with marked-up annotated lesions. It is a web-accessible international resource for development, training, and evaluation of computer-assisted diagnostic (CAD) methods for lung cancer detection and diagnosis. Initiated by the National Cancer Institute (NCI), further advanced by the Foundation for the National Institutes of Health (FNIH), and accompanied by the Food and Drug Administration (FDA) through active participation, this public-private partnership demonstrates the success of a consortium founded on a consensus-based process.
 
 ## Requirements
 - **Python ≥ 3.5**
