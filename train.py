@@ -102,7 +102,7 @@ with Deconvnet.sess as sess:
                 
                 # save Training state for each snapshot step
                 if epoch%snapshot_step==0 and epoch !=0:
-                    saver.save(sess, "./snapshot/tensorflow/Deconvnet_"+str(step)+".ckpt")
+                    saver.save(sess, "./snapshot/tensorflow/Deconvnet_"+str(epoch)+".ckpt")
 
                 pbar.set_description("[ Step : "+str(epoch+1)+"]")
                 pbar.set_postfix_str(" Train - Accuracy : {:.5f}".format(train_acc/train_count if train_count !=0 else 0)+
