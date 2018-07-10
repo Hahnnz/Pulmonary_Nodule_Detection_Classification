@@ -20,7 +20,7 @@ Lung Cancer Diagnosis Algorithm in Patients with Isolated Pulmonary Nodules in C
 - **Tqdm ≥ 4.19.9**
 - **LMDB ≥ 0.94**
 
-## Citations - for Accuracy comparison
+## Citations
 [1] Armato III, Samuel G., McLennan, Geoffrey, Bidaut, Luc, McNitt-Gray, Michael F., Meyer, Charles R., Reeves, Anthony P., … Clarke, Laurence P. (2015). Data From LIDC-IDRI. The Cancer Imaging Archive.
 
 [2] Y.Lee, T. Hara, Fujita, S.Itoh, and T. Ishihaki. "Automated detection of pulmonary nodules in helical CT images based on an improved temlate maching technique", IEEE Trans. Med. Imaging, vol.20, pp. 595-604, 2001.
